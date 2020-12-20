@@ -1,0 +1,28 @@
+GET 
+http://google.com/ [HTTP/1.1 301 Moved Permanently 25ms]
+GET 
+https://www.google.com/ [HTTP/2.0 200 OK 155ms]
+GET 
+https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png [HTTP/2.0 200 OK 18ms]
+GET 
+https://ssl.gstatic.com/gb/images/i2_2ec824b0.png [HTTP/2.0 200 OK 112ms]
+POST 
+https://www.google.com/gen_204 [HTTP/2.0 204 No Content 29ms]
+GET 
+https://www.google.com/xjs/_/js/k=xjs.s.en_US.pydDLG5OSS4.O/m=sx,Fkg7bd,HcFEGb,IvlUe,MC8mtf,OF7gzc,RMhBfe,T4BAC,TJw5qb,TbaHGc,Y33vzc,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,uz938c,vWNDde,ws9Tlc,xpltpb,yQ43ff,d,csi/am=AsAizEAA-T8FkIDAKthggQmUGEw/rt=j/d=1/dg=2/rs=ACT90oEDKx0TItwaMXHtzQWizUHFMnCj9Q [HTTP/2.0 200 OK 27ms]
+GET 
+https://www.google.com/images/nav_logo242.png [HTTP/2.0 200 OK 23ms]
+POST 
+https://www.google.com/gen_204 [HTTP/2.0 204 No Content 18ms]
+GET 
+https://www.google.com/xjs/_/js/k=xjs.s.en_US.rk8LGYywBBw.O/am=AsAizEAA-T8FkIDAKthggQmUGEw/rt=j/d=1/exm=sx,Fkg7bd,HcFEGb,IvlUe,MC8mtf,OF7gzc,RMhBfe,T4BAC,TJw5qb,TbaHGc,Y33vzc,cdos,cr,hsm,iDPoPb,jsa,mvYTse,tg8oTe,uz938c,vWNDde,ws9Tlc,xpltpb,yQ43ff,d,csi/ed=1/dg=2/rs=ACT90oG_54g2azzJJvRE8eybl33V_GFbqw/m=sb_wiz,aa,abd,async,dvl,foot,ifl,ipv6,lu,m,mu,sf,xz7cCd [HTTP/2.0 200 OK 9ms]
+GET 
+https://www.gstatic.com/og/_/js/k=og.og2.en_US.wGnP9uUNyTI.O/rt=j/m=def/exm=in,fot/d=1/ed=1/rs=AA2YrTsnti_AAXU0WqFDAtu1uB11b8oLfA [HTTP/2.0 200 OK 22ms]
+GET 
+https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.BstDmEhpa_Q.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-oqKdOJIcyAi5YyA6pahSkp_ojsw/cb=gapi.loaded_0 [HTTP/2.0 200 OK 85ms]
+POST 
+https://www.google.com/gen_204 [HTTP/2.0 204 No Content 18ms]
+GET 
+https://adservice.google.com/adsid/google/ui [HTTP/2.0 204 No Content 61ms]
+
+        

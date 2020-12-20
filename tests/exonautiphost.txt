@@ -1,0 +1,4 @@
+https://web.archive.org/web/2id_/http://157.166.228.34/exonaut/crossdomain.xml
+https://web.archive.org/web/2id_/http://157.166.228.34/exonaut/ExonautPlayerAuthenticate
+https://web.archive.org/web/2id_/http://157.166.228.34/exonaut/ExonautPlayerGetMissionProgress?exId=1
+https://web.archive.org/web/2id_/http://157.166.228.34/exonaut/gamedata.json

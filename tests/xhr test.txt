@@ -1,0 +1,13 @@
+XHRGEThttp://uploads.ungrounded.net/alternate/1296000/1296595_alternate_71875_r12.zip/html5game/snd_foot0.ogg
+[HTTP/1.1 200 OK 0ms]
+XHRGEThttp://uploads.ungrounded.net/alternate/1296000/1296595_alternate_71875_r12.zip/html5game/snd_fireball_impact.ogg
+[HTTP/1.1 200 OK 0ms]
+XHRGEThttp://uploads.ungrounded.net/alternate/1296000/1296595_alternate_71875_r12.zip/html5game/snd_foot1.ogg
+[HTTP/1.1 200 OK 0ms]
+XHRGEThttp://uploads.ungrounded.net/alternate/1296000/1296595_alternate_71875_r12.zip/html5game/snd_foot2.ogg
+[HTTP/1.1 200 OK 0ms]
+XHRGEThttp://uploads.ungrounded.net/alternate/1296000/1296595_alternate_71875_r12.zip/html5game/snd_foot3.ogg
+[HTTP/1.1 200 OK 0ms]
+XHRGEThttp://uploads.ungrounded.net/alternate/1296000/1296595_alternate_71875_r12.zip/html5game/snd_foot4.ogg
+[HTTP/1.1 200 OK 0ms]
+XHRGEThttp://uploads.ungrounded.net/alternate/1296000/1296595_alternate_71875_r12.zip/html5game/snd_password_buzz.ogg

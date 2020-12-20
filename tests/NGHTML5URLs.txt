@@ -1,0 +1,110 @@
+curl "https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/" ^
+  -H "authority: uploads.ungrounded.net" ^
+  -H "cache-control: max-age=0" ^
+  -H "dnt: 1" ^
+  -H "upgrade-insecure-requests: 1" ^
+  -H "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" ^
+  -H "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" ^
+  -H "sec-fetch-site: none" ^
+  -H "sec-fetch-mode: navigate" ^
+  -H "sec-fetch-user: ?1" ^
+  -H "sec-fetch-dest: document" ^
+  -H "accept-language: en-US,en;q=0.9,fr;q=0.8,fi;q=0.7,ru;q=0.6" ^
+  -H "if-none-match: ^\^"5c42a282-2f4^\^"" ^
+  -H "if-modified-since: Sat, 19 Jan 2019 04:07:30 GMT" ^
+  --compressed &
+curl "https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/TemplateData/UnityProgress.js" ^
+  -H "Referer: https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" ^
+  -H "DNT: 1" ^
+  --compressed &
+curl "https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/Build/UnityLoader.js" ^
+  -H "Referer: https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" ^
+  -H "DNT: 1" ^
+  --compressed &
+curl "chrome-extension://dnfbbeblcdlfnoneibihgklodmlkimfo/a181b4673216ad247a0f78066a9646e1.js" ^
+  -H "Referer: " ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" ^
+  -H "DNT: 1" ^
+  --compressed &
+curl "https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/TemplateData/style.css" ^
+  -H "Referer: https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" ^
+  -H "DNT: 1" ^
+  --compressed &
+curl "https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/Build/Dr^%^20Doe's^%^20Chemistry^%^20Quiz.json" ^
+  -H "Referer: https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" ^
+  -H "DNT: 1" ^
+  --compressed &
+curl "https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/Build/Dr^%^20Doe's^%^20Chemistry^%^20Quiz.asm.code.unityweb" ^
+  -H "Referer: https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" ^
+  -H "DNT: 1" ^
+  --compressed &
+curl "https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/Build/Dr^%^20Doe's^%^20Chemistry^%^20Quiz.asm.memory.unityweb" ^
+  -H "Referer: https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" ^
+  -H "DNT: 1" ^
+  --compressed &
+curl "https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/Build/Dr^%^20Doe's^%^20Chemistry^%^20Quiz.asm.framework.unityweb" ^
+  -H "Referer: https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" ^
+  -H "DNT: 1" ^
+  --compressed &
+curl "https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/Build/Dr^%^20Doe's^%^20Chemistry^%^20Quiz.data.unityweb" ^
+  -H "Referer: https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" ^
+  -H "DNT: 1" ^
+  --compressed &
+curl "https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/TemplateData/favicon.ico" ^
+  -H "authority: uploads.ungrounded.net" ^
+  -H "pragma: no-cache" ^
+  -H "cache-control: no-cache" ^
+  -H "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" ^
+  -H "dnt: 1" ^
+  -H "accept: image/avif,image/webp,image/apng,image/*,*/*;q=0.8" ^
+  -H "sec-fetch-site: same-origin" ^
+  -H "sec-fetch-mode: no-cors" ^
+  -H "sec-fetch-dest: image" ^
+  -H "referer: https://uploads.ungrounded.net/alternate/1292000/1292533_alternate_71584_r5.zip/" ^
+  -H "accept-language: en-US,en;q=0.9,fr;q=0.8,fi;q=0.7,ru;q=0.6" ^
+  --compressed &
+curl "https://config.uca.cloud.unity3d.com/" ^
+  -H "authority: config.uca.cloud.unity3d.com" ^
+  -H "accept: */*" ^
+  -H "dnt: 1" ^
+  -H "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" ^
+  -H "content-type: application/json" ^
+  -H "origin: https://uploads.ungrounded.net" ^
+  -H "sec-fetch-site: cross-site" ^
+  -H "sec-fetch-mode: cors" ^
+  -H "sec-fetch-dest: empty" ^
+  -H "referer: https://uploads.ungrounded.net/" ^
+  -H "accept-language: en-US,en;q=0.9,fr;q=0.8,fi;q=0.7,ru;q=0.6" ^
+  --data-binary "^{^\^"common^\^":^{^\^"appid^\^":^\^"local.3e28c7d914615d847917dae2dfc1f613^\^",^\^"userid^\^":^\^"69251999e73b04215a841232bebade37^\^",^\^"sessionid^\^":5313023218829469303,^\^"platform^\^":^\^"WebGL^\^",^\^"platformid^\^":17,^\^"sdk_ver^\^":^\^"u2017.2.0f3^\^",^\^"localprojectid^\^":^\^"3e28c7d914615d847917dae2dfc1f613^\^",^\^"build_guid^\^":^\^"4d49be9abe125b44e81a6b0f1c214c68^\^",^\^"deviceid^\^":^\^"n/a^\^"^}^}" ^
+  --compressed &
+curl "https://cdp.cloud.unity3d.com/v1/events" ^
+  -H "authority: cdp.cloud.unity3d.com" ^
+  -H "event_count: 1" ^
+  -H "dnt: 1" ^
+  -H "data_retry_count: 1" ^
+  -H "expired_session_dropped: 0" ^
+  -H "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" ^
+  -H "content-type: application/json" ^
+  -H "accept: */*" ^
+  -H "data_block_id: caa295c089bdcf28e1bd5be116f5bd69" ^
+  -H "continuous_request: 1" ^
+  -H "origin: https://uploads.ungrounded.net" ^
+  -H "sec-fetch-site: cross-site" ^
+  -H "sec-fetch-mode: cors" ^
+  -H "sec-fetch-dest: empty" ^
+  -H "referer: https://uploads.ungrounded.net/" ^
+  -H "accept-language: en-US,en;q=0.9,fr;q=0.8,fi;q=0.7,ru;q=0.6" ^
+  --data-binary ^"^{^\^"common^\^":^{^\^"appid^\^":^\^"local.3e28c7d914615d847917dae2dfc1f613^\^",^\^"userid^\^":^\^"69251999e73b04215a841232bebade37^\^",^\^"sessionid^\^":5313023218829469303,^\^"platform^\^":^\^"WebGL^\^",^\^"platformid^\^":17,^\^"sdk_ver^\^":^\^"u2017.2.0f3^\^",^\^"localprojectid^\^":^\^"3e28c7d914615d847917dae2dfc1f613^\^",^\^"build_guid^\^":^\^"4d49be9abe125b44e81a6b0f1c214c68^\^",^\^"deviceid^\^":^\^"n/a^\^"^}^}^
+
+^{^\^"type^\^":^\^"analytics.appStart.v1^\^",^\^"msg^\^":^{^\^"ts^\^":1603587511889^}^}^
+
+^" ^
+  --compressed

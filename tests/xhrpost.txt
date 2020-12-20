@@ -1,0 +1,4 @@
+GEThttps://www.youtube.com/yts/jsbin/player_ias-vfl7A19HM/en_US/remote.js
+[HTTP/2.0 200 OK 0ms]
+
+XHRPOSThttps://www.youtube.com/youtubei/v1/log_event?alt=json&key=AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8

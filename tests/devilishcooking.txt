@@ -1,0 +1,29 @@
+GEThttp://www8.agame.com/games/flash/d/devilish_cooking/devilish_cooking.swf?id=153294&s=90&c=3&hash=UwAA_wDYBAEDYdBD7MgAWgMAXaN1S12jdUt0qoH5iGg6I7lREPkVFmR3XgbUgA&username=guest
+[HTTP/1.1 304 Not Modified 93ms]
+
+GEThttp://www8.agame.com/games/sitelock/sites.xml
+[HTTP/1.1 200 OK 0ms]
+
+GEThttp://api.configar.org/crossdomain.xml
+[HTTP/1.1 200 OK 0ms]
+
+GEThttp://api.configar.org/cf/pb/1/settings/3/90/eacaee966bae1d197103743a7819abcf?type=live&nocache=48
+[HTTP/1.1 200 OK 138ms]
+
+GEThttp://www8.agame.com/favicon.ico
+GEThttp://files.cdn.spilcloud.com/flashapi_1_3_1_148/ServicesConnection.swf
+[HTTP/1.1 200 OK 0ms]
+
+GEThttp://files.cdn.spilcloud.com/flashapi_1_3_1_148/BrandSystem.swf
+[HTTP/1.1 200 OK 0ms]
+
+GEThttp://www8.agame.com/crossdomain.xml
+[HTTP/1.1 200 OK 0ms]
+
+GEThttp://www8.agame.com/sdk/spilapi/localization/BrandLocalization.swf
+[HTTP/1.1 200 OK 0ms]
+
+GEThttp://www8.agame.com/sdk/spilapi/localization/default_localization2.swf
+[HTTP/1.1 200 OK 0ms]
+
+GEThttp://files.cdn.spilcloud.com/flashapi_1_3_1_148/ServicePack.swf

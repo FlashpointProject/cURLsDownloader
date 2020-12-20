@@ -1,0 +1,1 @@
+ftp://ftp.cs.brown.edu/pub/AnimatedTexture2/

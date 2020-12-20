@@ -1,0 +1,6 @@
+GET 
+http://www.willing-to-try.com/exit.html [HTTP/1.1 200 OK 0ms]
+GET 
+http://www.willing-to-try.com/img/exit.gif [HTTP/1.1 200 OK 0ms]
+GET 
+http://www.willing-to-try.com/img/bg.jpg
