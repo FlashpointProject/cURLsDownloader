@@ -1,0 +1,73 @@
+----------  cURLsDownloader Changelog  ----------
+
+Version 5.5:
+- Added support for mirroring open FTP directories
+- Updated URL processing to work with Chrome's new cURL command format
+- Fixed bug that prevented cURLsDownloader from working if run from a path with parentheses
+- Fixed issue that caused the wrong FIND command to be run on some computers
+- Fixed bug that caused a "maximum setlocal recursion level reached" message to be displayed
+
+Version 5.4:
+- New one-pass URL detection
+- Fixed bug with special characters in URLs
+- Prettified the code
+
+Version 5.3:
+- Tries to skip already-downloaded URLs
+- Improved URL detection
+
+Version 5.2:
+- Fixed some menu and string-handling issues
+
+Version 5.1:
+- Prompts for another input after job is complete
+- Ignores robots.txt when mirroring
+- Fixed bug that purged files from the backup folder
+- Fixed bug with referrers 
+- Improved menus and logging
+
+Version 5.0:
+- URL can be entered at the prompt or as an argument
+- Ability to mirror entire websites
+- Updated Wget to version 1.20.3
+- Automatically decodes GZIP responses: added --compression=auto to Wget options
+- Fixed some HTTPS sites: added --no-check-certificate to Wget options
+- Automatically moves files from web.archive.org to their original domains
+- Added customizable auto-close behavior
+- Ability to check existing files without downloading anything
+- New Help PDF file and more customization options
+
+Version 4.4:
+- Added compatibility with XHR requests in Firefox
+- Added compatibility with URLs enclosed in double quotes
+- Removed -k from the Wget options, since it should rarely be needed
+
+Version 4.3:
+- Removed text file pre-processing to fix bug with referrers
+- Each URL saved is now logged
+
+Version 4.2:
+- Fixed Firefox compatibility
+- Compatibility with the console output of older Mozilla-based browsers such as Pale Moon and SeaMonkey
+- Pre-processes text file and feeds it to wget using --input-file option. Processed text file is saved in the new Logs folder.
+- Displays the number of files that will be downloaded
+
+Version 4.1:
+- Added referrer spoofing to fix some downloads
+
+Version 4.0:
+- Significantly improved UX
+- New folder organization
+- Automatically fixes incorrectly saved filenames
+
+Version 3.0:
+- Supports taking an input filename as a command-line argument
+- Added URL validation
+- Added support for input from the Firefox console
+- Added a Help HTML file
+
+Version 2.0:
+- Added -x to Wget options
+
+Version 1.0:
+- Initial release
