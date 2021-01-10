@@ -1,5 +1,8 @@
 ----------  cURLsDownloader Changelog  ----------
 
+Version 5.6:
+- Fixed error when entering URLs with ampersands
+
 Version 5.5:
 - Added support for mirroring open FTP directories
 - Updated URL processing to work with Chrome's new cURL command format

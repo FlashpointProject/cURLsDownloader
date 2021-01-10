@@ -51,17 +51,19 @@ REM Check if the input is just a filename or a whole path. If it is a path it wi
 REM So we count the number of backslashes in the string with FIND /C. 
 REM The count is written to a temporary file and read from there into the TEST variable.
 SET "CHAR=\"
-ECHO "%INPUT%" | %WINDIR%\System32\find.exe /C "%CHAR%" > "%TMPFILE%"
+ECHO "!INPUT!" | %WINDIR%\System32\find.exe /C "%CHAR%" > "%TMPFILE%"
 SET /P TEST=<"%TMPFILE%"
 DEL "%TMPFILE%"
 IF %TEST%==0 (
-	SET "FILE=%~dp0%INPUT%"
+	SET "FILE=%~dp0!INPUT!"
 ) ELSE (
-	SET "FILE=%INPUT%"
+	SET "FILE=!INPUT!"
 )
 
 :MAIN
 	CALL :PRETTY
+	REM Check if the file exists
+	IF NOT EXIST "!FILE!" (GOTO ERR)
 	REM Check if the file is readable by the TYPE function
 	TYPE "%FILE%">NUL
 	IF NOT %ERRORLEVEL%==0 (GOTO ERR)
@@ -132,7 +134,7 @@ EXIT /B
 	IF "%ACTION%"=="2" (SET "WGET_OPTIONS=%WGET_OPTIONS% %MIR_OPTIONS%")
 	SET "WGET_OPTIONS=%WGET_OPTIONS% %GRAB_OPTIONS%"
 	SET "FILE=%~dp0Logs\Input.txt"
-	ECHO %INPUT%>"%FILE%"
+	ECHO !INPUT!>"%FILE%"
 EXIT /B
 
 :validateURL
@@ -236,6 +238,6 @@ EXIT /B
 
 :PRETTY
 	CLS & ECHO.
-	ECHO -------------------------   cURLsDownloader by nosamu   ---   version 5.5   ---   2020-12-20   ------------------------- 
+	ECHO -------------------------   cURLsDownloader by nosamu   ---   version 5.6   ---   2021-01-10   ------------------------- 
 	ECHO.
 EXIT /B
