@@ -189,7 +189,7 @@ IF NOT EXIST "Downloads\web.archive.org\web" (EXIT /B)
 	FOR /D %%i IN (*) DO (
 		CD %%i
 		FOR /D %%j IN (*) DO (
-			ROBOCOPY %%j ..\..\..\ /S /MOVE >> "%~dp0Logs\robocopy.log"
+			%WINDIR%\System32\Robocopy.exe %%j ..\..\..\ /S /MOVE >> "%~dp0Logs\robocopy.log"
 		)
 		CD ..
 	)
@@ -215,7 +215,7 @@ EXIT /B
 	IF /I "%REN:~0,1%"=="r" (GOTO REN)
 	IF "%REN%"=="1" (GOTO REN)
 
-	ROBOCOPY Downloads Downloads-backup /S > Logs\robocopy.log
+	%WINDIR%\System32\Robocopy.exe Downloads Downloads-backup /S > Logs\robocopy.log
 	:REN
 	REM Use Bulk Rename Command with a regular expression rule to remove the "@" symbol and everything after it from each filename.
 	App\BRC32 /DIR:Downloads /IGNOREFILEX /NOFOLDERS /NODUP /RECURSIVE /REGEXP:^(.*)(\@(.*)):\1 /EXECUTE > Logs\bulkrename.log
