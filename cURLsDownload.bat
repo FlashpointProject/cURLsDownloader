@@ -3,8 +3,10 @@ REM External tools used: Wget for Windows, Bulk Rename Command
 REM Wget binary downloaded from: https://eternallybored.org/misc/wget/
 REM Bulk Rename Command official site: bulkrenameutility.co.uk
 
-SETLOCAL EnableDelayedExpansion
+REM %~dp0 is the full path to the batch file, including the trailing backslash.
+SET "BatFolderPath=%~dp0"
 SET "INPUT=%~1"
+SETLOCAL EnableDelayedExpansion
 :START
 
 REM cURLsDownloader Settings - you're free to change these!
@@ -14,8 +16,7 @@ SET "MIR_OPTIONS=-r -l inf -np"
 SET /A AUTOCLOSE_SECS=-1
 
 CALL :PRETTY
-REM %~dp0 is the full path to the batch file, including the trailing backslash.
-PUSHD "%~dp0"
+PUSHD "!BatFolderPath!"
 IF NOT EXIST App (
 	POPD
 	ENDLOCAL
@@ -25,11 +26,11 @@ IF NOT EXIST App (
 	EXIT /B 1
 )
 IF NOT EXIST Logs (MKDIR Logs)
-SET "TMPFILE=%~dp0Logs\test.tmp"
+SET "TMPFILE=!BatFolderPath!Logs\test.tmp"
 IF NOT DEFINED INPUT (SET /P INPUT="Enter a filename or URL: ")
 REM Autofill URLs.txt for the input if nothing is entered
 IF NOT DEFINED INPUT (
-	SET "FILE=%~dp0URLs.txt"
+	SET "FILE=!BatFolderPath!URLs.txt"
 	GOTO MAIN
 )
 
@@ -51,11 +52,11 @@ REM Check if the input is just a filename or a whole path. If it is a path it wi
 REM So we count the number of backslashes in the string with FIND /C. 
 REM The count is written to a temporary file and read from there into the TEST variable.
 SET "CHAR=\"
-ECHO "!INPUT!" | %WINDIR%\System32\find.exe /C "%CHAR%" > "%TMPFILE%"
-SET /P TEST=<"%TMPFILE%"
-DEL "%TMPFILE%"
+ECHO "!INPUT!" | %WINDIR%\System32\find.exe /C "%CHAR%" > "!TMPFILE!"
+SET /P TEST=<"!TMPFILE!"
+DEL "!TMPFILE!"
 IF %TEST%==0 (
-	SET "FILE=%~dp0!INPUT!"
+	SET "FILE=!BatFolderPath!!INPUT!"
 ) ELSE (
 	SET "FILE=!INPUT!"
 )
@@ -65,12 +66,12 @@ IF %TEST%==0 (
 	REM Check if the file exists
 	IF NOT EXIST "!FILE!" (GOTO ERR)
 	REM Check if the file is readable by the TYPE function
-	TYPE "%FILE%">NUL
+	TYPE "!FILE!">NUL
 	IF NOT %ERRORLEVEL%==0 (GOTO ERR)
 	ECHO Fetching files...
 	REM NEWFILE is a log of all the valid URLs passed to Wget.
-	SET "NEWFILE=%~dp0Logs\URLs.txt"
-	IF EXIST "%NEWFILE%" (DEL "%NEWFILE%")
+	SET "NEWFILE=!BatFolderPath!Logs\URLs.txt"
+	IF EXIST "!NEWFILE!" (DEL "!NEWFILE!")
 	IF EXIST Logs\wget.log (DEL Logs\wget.log)
 	IF NOT EXIST Downloads (MKDIR Downloads)
 
@@ -81,7 +82,7 @@ IF %TEST%==0 (
 	REM Give the 1st token to the 1st variable and the 2nd token to the 2nd variable,
 	REM and validate the 2nd variable.
 	REM Validate the 1st variable if validation of the 2nd is unsuccessful.
-	FOR /F tokens^=1^-2^ delims^=^"^  %%i in ('type "%FILE%"') do (
+	FOR /F tokens^=1^-2^ delims^=^"^  %%i in ('type "!FILE!"') do (
 		SET "URL=%%j"
 		CALL :validateURL
 		IF NOT !ERRORLEVEL!==0 (
@@ -94,7 +95,7 @@ IF %TEST%==0 (
 
 	REM Check if any URLs were actually fetched
 	SET /A NUMLINES=0
-	FOR /F %%i in ('type "%NEWFILE%"') do (SET /A NUMLINES=!NUMLINES!+1)
+	FOR /F %%i in ('type "!NEWFILE!"') do (SET /A NUMLINES=!NUMLINES!+1)
 	IF %NUMLINES%==0 (
 		CALL :PRETTY
 		GOTO ERR
@@ -109,7 +110,7 @@ IF %TEST%==0 (
 	ECHO Finished^^^! Press Enter to view your files,
 	SET /P INPUT="Or type another filename or URL: "
 	IF DEFINED INPUT (GOTO START)
-	START explorer "%~dp0Downloads"
+	START explorer "!BatFolderPath!Downloads"
 	GOTO EXIT
 :AUTOCLOSE
 	ECHO Finished^^^!
@@ -133,8 +134,8 @@ EXIT /B
 	IF /I "%ACTION:~0,1%"=="m" (SET "WGET_OPTIONS=%WGET_OPTIONS% %MIR_OPTIONS%")
 	IF "%ACTION%"=="2" (SET "WGET_OPTIONS=%WGET_OPTIONS% %MIR_OPTIONS%")
 	SET "WGET_OPTIONS=%WGET_OPTIONS% %GRAB_OPTIONS%"
-	SET "FILE=%~dp0Logs\Input.txt"
-	ECHO !INPUT!>"%FILE%"
+	SET "FILE=!BatFolderPath!Logs\Input.txt"
+	ECHO !INPUT!>"!FILE!"
 EXIT /B
 
 :validateURL
@@ -151,9 +152,9 @@ EXIT /B
 	REM Set referer to current URL
 	SET "WGET_OPT=%WGET_OPTIONS:URL=!URL!%"
 	REM Write logs and grab URL
-	ECHO !URL!>>"%NEWFILE%"
-	ECHO %~dp0App\wget !WGET_OPT! "!URL!">>"%~dp0Logs\wget.log"
-	"%~dp0App\wget" !WGET_OPT! "!URL!"
+	ECHO !URL!>>"!NEWFILE!"
+	ECHO !BatFolderPath!App\wget !WGET_OPT! "!URL!">>"!BatFolderPath!Logs\wget.log"
+	"!BatFolderPath!App\wget" !WGET_OPT! "!URL!"
 EXIT /B %ERRORLEVEL%
 
 :checkFiles
@@ -162,9 +163,9 @@ EXIT /B %ERRORLEVEL%
 	REM Check if any filenames have the "@" symbol in the filename.
 	REM This happens when Wget fetches URLs with parameters. 
 	REM All the "@" symbols must be removed to work correctly in Flashpoint.
-	DIR /A-D /B /S | %WINDIR%\System32\find.exe /C "@" > "%TMPFILE%"
-	SET /P ERCOUNT=<"%TMPFILE%"
-	DEL "%TMPFILE%"
+	DIR /A-D /B /S | %WINDIR%\System32\find.exe /C "@" > "!TMPFILE!"
+	SET /P ERCOUNT=<"!TMPFILE!"
+	DEL "!TMPFILE!"
 	CD ..
 	IF NOT %ERCOUNT%==0 (
 		CALL :RENP
@@ -189,7 +190,7 @@ IF NOT EXIST "Downloads\web.archive.org\web" (EXIT /B)
 	FOR /D %%i IN (*) DO (
 		CD %%i
 		FOR /D %%j IN (*) DO (
-			%WINDIR%\System32\Robocopy.exe %%j ..\..\..\ /S /MOVE >> "%~dp0Logs\robocopy.log"
+			%WINDIR%\System32\Robocopy.exe %%j ..\..\..\ /S /MOVE >> "!BatFolderPath!Logs\robocopy.log"
 		)
 		CD ..
 	)
@@ -238,6 +239,6 @@ EXIT /B
 
 :PRETTY
 	CLS & ECHO.
-	ECHO -------------------------   cURLsDownloader by nosamu   ---   version 5.6   ---   2021-01-10   ------------------------- 
+	ECHO -------------------------   cURLsDownloader by nosamu   ---   version 5.7   ---   2021-05-11   ------------------------- 
 	ECHO.
 EXIT /B

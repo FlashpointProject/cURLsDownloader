@@ -1,5 +1,8 @@
 ----------  cURLsDownloader Changelog  ----------
 
+Version 5.7:
+- Fixed bug that prevented cURLsDownloader from working if run from a path with exclamation marks
+
 Version 5.6:
 - Fixed error when entering URLs with ampersands
 - Fixed potential issue with the Robocopy command
